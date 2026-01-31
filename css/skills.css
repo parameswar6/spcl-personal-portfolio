@@ -9,6 +9,9 @@ body{
     background-color: #0f172a;
     color: #e5e7eb;
     line-height: 1.6;
+     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* HEADER */
@@ -117,6 +120,7 @@ body{
     text-align: center;
     color: #94a3b8;
     background-color: #020617;
+    margin-top:auto;
 }
 
 /* MOBILE */
@@ -132,5 +136,6 @@ body{
     .middle2_actions{
         flex-direction: column;
         gap: 1.2rem;
+
     }
 }
