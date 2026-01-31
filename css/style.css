@@ -11,7 +11,7 @@ body{
     line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -36,7 +36,6 @@ body{
 @keyframes float {
     0% { transform: translate(0, 0); }
     50% { transform: translate(0, -6px); }
-    75% { transform: translate(-3px, -4px); }
     100% { transform: translate(0, 0); }
 }
 
@@ -77,9 +76,9 @@ body{
     width: 100%;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-    padding-top: 120px; /* space for fixed navbar */
+    padding-top: 120px;
 }
 
 .content{
@@ -96,6 +95,7 @@ body{
     border-bottom: 1px solid rgba(255,255,255,0.08);
     transition: transform 0.4s ease;
 }
+
 .middle1:hover{
     transform: translateY(-4px);
 }
@@ -109,21 +109,18 @@ body{
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
 }
 
-/* ABOUT ME */
+/* ================= ABOUT ================= */
 .about-me{
-    min-height: 70vh;              /* covers most of screen */
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;       /* vertical center */
-    
+    justify-content: center;
     max-width: 700px;
-    margin: 0 auto;                /* horizontal center */
+    margin: 0 auto;
     padding: 2rem;
-
     color: #cbd5f5;
     text-align: center;
 }
-
 
 .about-me h2{
     margin-bottom: 1rem;
@@ -135,7 +132,7 @@ body{
     line-height: 1.7;
 }
 
-/* ACTION BUTTONS */
+/* ================= ACTION BUTTONS ================= */
 .middle2_actions{
     display: flex;
     justify-content: center;
@@ -143,90 +140,109 @@ body{
     padding: 2rem;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 .footer{
+    background-color: #020617;
     text-align: center;
     padding: 2rem;
     color: #94a3b8;
-   .footer{
-    background-color: #020617;
 }
-.profile-link {
+
+.profile-link{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    margin-top:0.9rem;
-    gap:1rem;
+    margin-top: 0.9rem;
+    gap: 1rem;
 }
+
 .profile-link a{
     color: #94a3b8;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-
-
+.profile-link a:hover{
+    color: #38bdf8;
+    transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
-
-  /* NAVBAR */
-  .navbar {
-    padding: 0.9rem 1.3rem;
-  }
-
-  .nav-links {
-    gap: 1rem;
-  }
-
-  .nav-links a {
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px){
+    .logo{
     font-size: 0.8rem;
-  }
-
-  /* HERO */
-  .hero {
-    padding-top: 100px;
-  }
-
-  /* PROFILE SECTION */
-  .middle1 {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
-  }
-
-  .middle1 img {
-    width: 140px;
-    height: 140px;
-  }
-
-  /* ABOUT ME */
-  .about-me {
-    padding: 1.5rem;
-    min-height: auto;
-  }
-
-  .about-me h2 {
-    font-size: 1.4rem;
-  }
-
-  .about-me p {
-    font-size: 0.95rem;
-  }
-
-  /* ACTION BUTTONS */
-  .middle2_actions {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-  }
-  .footer{
-    padding: 1.2rem;
-
-  }
-  .profile-link{
-    gap:0.8rem;
-  }
+    font-weight: 600;
 
 }
 
+    /* NAVBAR */
+    .navbar{
+        padding: 1rem 1.4rem;
+    }
 
+    .nav-links{
+        display: none;
+    }
+
+    /* HERO */
+    .hero{
+        padding-top: 90px;
+    }
+
+    .content{
+        gap: 1.8rem;
+    }
+
+    /* PROFILE */
+    .middle1{
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .middle1 img{
+        width: 140px;
+        height: 140px;
+    }
+
+    /* ABOUT */
+    .about-me{
+        min-height: auto;
+        text-align: left;
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .about-me h2{
+        font-size: 1.4rem;
+    }
+
+    .about-me p{
+        font-size: 0.95rem;
+    }
+
+    /* ACTION BUTTONS */
+    .middle2_actions{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .middle2_actions a{
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+    }
+
+    /* FOOTER */
+    .footer{
+        padding: 1.4rem;
+        font-size: 0.9rem;
+    }
+
+    .profile-link{
+        gap: 0.8rem;
+    }
+}
