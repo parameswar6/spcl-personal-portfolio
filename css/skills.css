@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.logo{
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 3rem;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #38bdf8;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(0, -6px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* SKILLS SECTION */
+.skills-simple{
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.skills-simple h2{
+    font-size: 2rem;
+    color: #38bdf8;
+}
+
+.skills-simple h2::after{
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg,#38bdf8,#a855f7);
+    display: block;
+    margin: 0.6rem auto 0;
+    border-radius: 2px;
+}
+
+/* SKILLS LIST */
+.skills-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding: 0 1rem;
+}
+
+.skills-list li{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.skills-list li i{
+    color: #38bdf8;
+    font-size: 1.1rem;
+}
+
+.skills-list li:hover{
+    transform: translateY(-5px);
+    background: rgba(56,189,248,0.15);
+    border-color: #38bdf8;
+}
+
+/* ACTION BUTTONS */
+.middle2_actions{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.links{
+    text-decoration: none;
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    padding: 0.6rem 1.6rem;
+    border-radius: 999px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.links:hover{
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* FOOTER */
+.footer{
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+    color: #94a3b8;
+    background-color: #020617;
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+    .skills-simple h2{
+        font-size: 1.6rem;
+    }
+
+    .skills-list li{
+        font-size: 0.95rem;
+    }
+
+    .middle2_actions{
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
